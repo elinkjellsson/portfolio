@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tattoos</title>
+    <style>
+      body {
+        background: linear-gradient(
+          99.6deg,
+          rgb(112, 128, 152) 10.6%,
+          rgb(242, 227, 234) 32.9%,
+          rgb(234, 202, 213) 52.7%,
+          rgb(220, 227, 239) 72.8%,
+          rgb(185, 205, 227) 81.1%,
+          rgb(154, 180, 212) 102.4%
+        );
+      }
+      .wrapper {
+        background: rgb(255, 255, 255, 0.4) !important;
+        margin: 0 auto;
+        max-width: 60rem;
+        border-radius: 15px;
+        padding: 10px;
+        background-color: var(--color-gray-light-2);
+        display: block;
+        box-shadow: 0px 0px 15px 4px #b3b3b3;
+      }
+      h1 {
+        text-align: center;
+        font-size: 48px;
+        line-height: 10px;
+      }
+      img {
+        display: block;
+        height: 300px;
+        width: 80% auto;
+        margin: 2% auto;
+        border-radius: 10px;
+        border: 2px solid;
+        border-color: #ecced9;
+        padding: 15px;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 15px 2px #b3b3b3;
+      }
+      h2 {
+        text-align: center;
+        margin: 5px;
+      }
+      p {
+        text-align: center;
+        margin: 15px;
+        font-family: serif;
+        line-height: 1.5;
+      }
+      .procedure {
+        text-align: center;
+      }
+      .procedure ul {
+        list-style: circle;
+        display: inline-block;
+        margin: 0 auto;
+      }
+      .small a {
+        text-decoration: none;
+      }
+      .small {
+        text-align: center;
+        font-size: 12px;
+        font-style: italic;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+
+      .tattoButton span {
+        font-family: serif;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 22px;
+      }
+      .tattoButton {
+        display: block;
+        box-sizing: border-box;
+        background: linear-gradient(
+          178.6deg,
+          rgb(20, 36, 50) 11.8%,
+          rgb(124, 143, 161) 83.8%
+        );
+        color: #ecced9;
+        margin: 20px auto;
+        padding: 15px 20px;
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+        border: 2px solid;
+        border-color: #ecced9;
+        box-shadow: 5px 5px 10px 0px #b3b3b3;
+        cursor: pointer;
+      }
+      .tattoButton:hover {
+        background: radial-gradient(
+          879px at 10.4% 22.3%,
+          rgb(255, 235, 238) 0%,
+          rgb(186, 190, 245) 93.6%
+        );
+        color: #000;
+        border: 2px solid;
+      }
+      .footer {
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>I love tattoos 🖋</h1>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/009/466/original/tattoo.jpg?1621873126"
+        alt="tatto-flowers"
+      />
+      <div class="about">
+        <h2>What is a tatto?</h2>
+        <p>
+          A tattoo is a permanent kind of body art. A design is made by
+          puncturing the skin with needles and injecting ink, dyes, and pigments
+          into the deep layer of the skin. Tattoos used to be done
+          <em>manually</em> — that is, the tattoo artist would puncture the skin
+          with a needle and inject the ink by hand. Though this process is still
+          used in some parts of the world, professional tattoo artists use
+          <em>tattoo machines</em>. A tattoo machine powers the needles up and
+          down as ink is deposited in the skin. If you're thinking about getting
+          a tattoo, you should understand that tattoos are <b>permanent</b>.
+          Tattoo removal is difficult, expensive, and may not completely remove
+          the tattoo.
+        </p>
+      </div>
+      <hr />
+      <h2>Whats the procedure like?</h2>
+      <div class="procedure">
+        <ul>
+          <li>
+            <p>
+              The tattoo artist should wash his or her hands with antibacterial
+              soap and water and wear clean, fresh gloves.
+            </p>
+          </li>
+          <li>
+            <p>
+              The to-be-tattooed area on your body is washed with soap and
+              shaved, if necessary. <br />The artist will draw or stencil the
+              design on your skin.
+            </p>
+          </li>
+          <li>
+            <p>
+              Using a tattoo machine with sterile needles attached, the tattoo
+              artist will begin drawing an outline of the tattoo. <br />
+              The artist may change needles, depending on the design and desired
+              effect. All needles should be single-use or sterilized.
+            </p>
+          </li>
+          <li>
+            <p>
+              When finished, the area, now sporting a finished tattoo, is
+              cleaned once again and a bandage applied.
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="small">
+        <a
+          href="https://kidshealth.org/en/teens/safe-tattooing.html#:~:text=A%20tattoo%20is%20a%20permanent,inject%20the%20ink%20by%20hand."
+          target="_blank"
+        >
+          Read more about tattos here
+        </a>
+      </div>
+
+      <button class="tattoButton">
+        <span>Want to get a tatto?</span>
+      </button>
+      <p class="footer">Coded by Elin Kjellsson</p>
+      <script>
+        function getTatto() {
+          let name = prompt("What is your name?");
+          let age = prompt("How old are you?");
+
+          if (age < 18) {
+            alert("Sorry " + name + "!" + " you're to young to get a tatto 😢");
+          } else {
+            alert("Woho! Let's go get tattooed " + name + "🤩");
+          }
+        }
+
+        let tattoButton = document.querySelector(".tattoButton");
+        tattoButton.addEventListener("click", getTatto);
+      </script>
+    </div>
+  </body>
+</html>
